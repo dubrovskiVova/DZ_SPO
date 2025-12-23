@@ -1,0 +1,115 @@
+body {
+  padding: 20px;
+  background: #f4f6f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Заголовок */
+#s {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 15px;
+  background: linear-gradient(135deg, #2b5876, #4e4376);
+  border-radius: 12px 12px 0 0;
+  letter-spacing: 1px;
+}
+
+/* Основной блок */
+.all {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  height: 500px;
+  background: #ffffff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Данные */
+#data {
+  width: 50%;
+}
+
+#data > div {
+  background: #f9fafb;
+  color: #333;
+  text-align: center;
+  line-height: 32px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+#data > div > p {
+  font-size: 18px;
+}
+
+/* Карта */
+#map {
+  width: 50%;
+}
+
+#map > iframe {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Карточки 7 дней */
+#seven {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+#seven > div {
+  background: #ffffff;
+  text-align: center;
+  width: 230px;
+  height: 320px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#seven > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+#seven > div > img {
+  height: 80px;
+  width: 80px;
+  margin-top: 15px;
+}
+
+#seven > div > div {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+/* 📱 Адаптив */
+@media (max-width: 768px) {
+  .all {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #data,
+  #map {
+    width: 100%;
+  }
+
+  #seven {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  #seven > div {
+    width: 100%;
+  }
+}
